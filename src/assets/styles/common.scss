@@ -1,0 +1,58 @@
+/*通用样式*/
+
+/*flex*/
+// 居中对齐
+.flex-center{
+  display: flex;
+  /* 在交叉轴方向上，使子元素居中对齐 */
+  align-items: center;
+  /* 在主轴方向上，使子元素居中对齐 */
+  justify-content: center;
+}
+
+.flx-justify-between{
+  display: flex;
+  /* 在主轴方向上，使子元素分别在两端对齐 */
+  align-items: center;
+  /* 在交叉轴方向上，使子元素居中对齐 */
+  justify-content: space-between;
+}
+
+.flx-align-center {
+  display: flex;
+  /* 在交叉轴方向上，使子元素居中对齐 */
+  align-items: center;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  content: "";
+}
+
+/* 文字单行省略号 */
+.sle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 文字多行省略号 */
+.mle {
+  /*将元素作为弹性伸缩盒子模型来显示内容*/
+  display: -webkit-box;
+  overflow: hidden;
+  /*控制伸缩盒子模型内部盒子的排列方向*/
+  -webkit-box-orient: vertical;
+  /*限制在一个块元素中显示的文本的行数*/
+  -webkit-line-clamp: 2;
+}
+
+/* 文字多了自动換行 */
+.break-word {
+  word-break: break-all;
+  word-wrap: break-word;
+}
