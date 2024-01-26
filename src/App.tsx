@@ -1,15 +1,14 @@
 import React from 'react';
-import {useRoutes} from "react-router-dom";
-import routes from "./router";
+import {BrowserRouter} from "react-router-dom";
 import './assets/styles/global.scss'
 import './assets/styles/common.scss'
+import Router from "./router";
 
 const App = () => {
-    const outlet = useRoutes(routes)
     return (
-        <div style={{height: '100%', width: '100%'}} className='flex-center'>
-            {outlet}
-        </div>
+        <BrowserRouter>
+            <Router/>
+        </BrowserRouter>
     )
 };
 export default App;

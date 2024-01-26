@@ -1,5 +1,5 @@
 import Home from "../pages/home";
-import {Navigate} from "react-router-dom";
+import {Navigate, useRoutes} from "react-router-dom";
 import Login from "../pages/login/login";
 // 模拟用户登录状态
 const isUserLoggedIn = localStorage.getItem('token');
@@ -19,7 +19,11 @@ const routes = [
     },
 ]
 
-export default routes
+const Router = () => {
+    return useRoutes(routes)
+}
+
+export default Router
 
 
 // import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
