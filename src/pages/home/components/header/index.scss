@@ -1,0 +1,46 @@
+.ant-layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  padding: 0 20px 0 3px !important;
+  background: #fff !important;
+  border-bottom: 1px solid #eee;
+
+  .header-lf {
+    .logo {
+      width: 250px;
+      height: 58px;
+      padding-left: 20px;
+
+      .logo-img {
+        width: 38px;
+        margin: 0 10px;
+      }
+
+      .logo-text {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 1);
+        white-space: nowrap;
+      }
+    }
+
+    .collapsed {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 1);
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+  }
+
+  .header-ri {
+    padding-right: 12px;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .iconfont {
+    color: rgba(0, 0, 0, 1);
+  }
+}
