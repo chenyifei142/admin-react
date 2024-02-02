@@ -1,30 +1,21 @@
 import React, {useState} from 'react';
-import {
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-    UploadOutlined,
-    UserOutlined,
-    VideoCameraOutlined,
-} from '@ant-design/icons';
-import {Layout, Menu, Button, theme} from 'antd';
+import {Layout, theme} from 'antd';
 
-const {Header, Sider, Content} = Layout;
+const {Sider, Content} = Layout;
 import './index.scss'
 import LayoutHeader from "@/pages/home/components/header";
+import LayoutSider from './components/sider'
+
 
 const App: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
-    const {
-        token: {colorBgContainer, borderRadiusLG},
-    } = theme.useToken();
-
     return (
         <Layout style={{height: '100%', width: '100%'}}>
             <LayoutHeader></LayoutHeader>
             <section className="flex ant-section">
                 <Layout>
                     <Sider collapsed={collapsed}>
-
+                        <LayoutSider />
                     </Sider>
                     <Content>
                         {/* <LayoutFooter /> */}

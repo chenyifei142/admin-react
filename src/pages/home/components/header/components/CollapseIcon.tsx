@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 
-import { updateCollapse } from '@/redux/modules/menu/action'
+import { updateCollapse } from '@/redux/menu/action'
 
 const CollapseIcon = (props: any) => {
     const { isCollapse, updateCollapse } = props
@@ -21,4 +21,4 @@ const CollapseIcon = (props: any) => {
     )
 }
 const mapStateToProps = (state: any) => state.menu
-export default CollapseIcon
+export default connect(mapStateToProps, { updateCollapse })(CollapseIcon)

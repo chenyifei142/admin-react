@@ -1,6 +1,6 @@
 import './index.scss'
 import loginLeftImg from "@/assets/images/login_left.png";
-import logoImg from "@/assets/images/logo.png";
+import logoImg from "@/assets/svg/logo.svg";
 import LoginForm from "./components/LoginForm";
 
 const Login = () => {
