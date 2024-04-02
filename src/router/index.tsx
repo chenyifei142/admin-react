@@ -1,4 +1,5 @@
 import Home from "../pages/home";
+import Layouts from "@/layouts/index";
 import {Navigate, useRoutes} from "react-router-dom";
 import Login from "../pages/login/login";
 // 模拟用户登录状态
@@ -7,16 +8,20 @@ const isUserLoggedIn = localStorage.getItem('token');
 const routes = [
     {
         path: "/",
-        element: isUserLoggedIn ? <Home/> : <Navigate to="/login"/>,
-    },
-    {
-        path: '/home',
-        element: <Home/>
+        element: <Navigate to="login"/>,
     },
     {
         path: '/login',
         element: <Login/>
     },
+    {
+        element: <Layouts/>,
+        children: [{
+            path: "/home",
+            element: <Home/>,
+            meta: {title: '首页'}
+        }]
+    }
 ]
 
 const Router = () => {

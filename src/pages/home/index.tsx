@@ -1,29 +1,10 @@
-import React, {useState} from 'react';
-import {Layout, theme} from 'antd';
+import React, {useEffect, useState} from 'react';
 
-const {Sider, Content} = Layout;
-import './index.scss'
-import LayoutHeader from "@/pages/home/components/header";
-import LayoutSider from './components/sider'
+const Home: React.FC = (props: any) => {
 
-
-const App: React.FC = () => {
-    const [collapsed, setCollapsed] = useState(false);
     return (
-        <Layout style={{height: '100%', width: '100%'}}>
-            <LayoutHeader></LayoutHeader>
-            <section className="flex ant-section">
-                <Layout>
-                    <Sider collapsed={collapsed}>
-                        <LayoutSider />
-                    </Sider>
-                    <Content>
-                        {/* <LayoutFooter /> */}
-                    </Content>
-                </Layout>
-            </section>
-        </Layout>
+        <div>123</div>
     );
 };
 
-export default App;
+export default Home

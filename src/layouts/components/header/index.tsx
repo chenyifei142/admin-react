@@ -1,9 +1,9 @@
 import {Layout} from 'antd'
 import './index.scss'
-import Logo from "@/pages/home/components/header/components/Logo";
-import CollapseIcon from "@/pages/home/components/header/components/CollapseIcon";
-import NotifyIcon from "@/pages/home/components/header/components/NotifyIcon";
-import AvatarIcon from "@/pages/home/components/header/components/AvatarIcon";
+import Logo from "@/layouts/components/header/components/Logo";
+import CollapseIcon from "@/layouts/components/header/components/CollapseIcon";
+// import NotifyIcon from "@/layouts/components/header/components/NotifyIcon";
+import AvatarIcon from "@/layouts/components/header/components/AvatarIcon";
 
 const LayoutHeader = () => {
     const {Header} = Layout
