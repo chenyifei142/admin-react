@@ -1,8 +1,8 @@
-import {combineReducers, legacy_createStore as createStore} from 'redux'
+import {applyMiddleware, combineReducers, legacy_createStore as createStore} from 'redux'
 import menu from "@/redux/menu/reducer";
 // import { persistReducer, persistStore } from 'redux-persist'
 // import storage from 'redux-persist/lib/storage'
-// import reduxThunk from 'redux-thunk'
+import {thunk} from 'redux-thunk';
 //
 // import menu from './modules/menu/reducer'
 // import theme from './modules/theme/reducer'
@@ -26,7 +26,7 @@ const reducer = combineReducers({
 // const persist_reducers = persistReducer(persitConfig, reducer)
 //
 // // Solve the problem that the same function supports multiple dispatches and asynchronous actions in React development
-const store = createStore(reducer)
+const store = createStore(reducer,applyMiddleware(thunk))
 //
 // const persistor = persistStore(store)
 //

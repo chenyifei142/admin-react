@@ -4,7 +4,6 @@ import {MenuFoldOutlined, MenuUnfoldOutlined} from '@ant-design/icons'
 import {updateCollapse} from '@/redux/menu/action'
 
 const CollapseIcon = (props: any) => {
-    console.log(props,"prprprppr")
     const {isCollapse, updateCollapse} = props
     return (
         <div className="collapsed flex items-center" onClick={() => {

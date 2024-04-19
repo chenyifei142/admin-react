@@ -15,6 +15,9 @@ const menu = (state: MenuState = menuState, action: AnyAction) => {
         case types.UPDATE_COLLAPSE:
             newState.isCollapse = action.isCollapse
             break
+        case types.SET_MENU_LIST:
+            newState.menuList = action.menuList
+            break
         default:
             return newState
     }
