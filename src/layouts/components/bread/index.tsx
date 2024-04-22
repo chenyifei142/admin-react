@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {useLocation} from "react-router-dom";
 import {formatFlatTree} from "@/utils/format";
 import './index.scss'
+
 interface BreadItem {
     path: string
     title: string
@@ -22,7 +23,6 @@ const Bread: React.FC = (props: any) => {
         id: 'path'
     })
 
-
     useEffect(() => {
         getBreadList(pathname)
     }, [pathname])
@@ -33,7 +33,6 @@ const Bread: React.FC = (props: any) => {
         const breadList: BreadItem[] = []
 
         while (pt) {
-            console.log(menus,"menus")
             let menu = menus.find((item) => item.key == pt)
             if (menu) {
                 breadList.unshift({

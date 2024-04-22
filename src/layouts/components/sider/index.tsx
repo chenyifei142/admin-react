@@ -114,6 +114,7 @@ const Sider: React.FC = (props: any) => {
     // 点击当前菜单跳转页面
     const navigate = useNavigate()
     const clickMenu: MenuProps['onClick'] = ({key}: { key: string }) => {
+        console.log(key, "key")
         navigate(key)
     }
 

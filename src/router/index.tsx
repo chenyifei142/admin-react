@@ -21,6 +21,7 @@ const routers = [
     },
 ]
 
+
 /**
  * 过滤异步路由，根据传入的 routes 数组和已加载的模块信息动态生成新的路由配置并返回
  * @param routes 原始路由配置数组
@@ -44,7 +45,7 @@ function filterAsyncRouter(routes: RoutersProps[], routers: RoutersProps[]) {
             }
         } else {
             // 否则，根据当前路由的 element 属性拼接对应的模块路径，并通过动态导入加载模块
-            const URL = `/src/page/${route.element}.tsx`
+            const URL = `/src/pages/${route.element}.tsx`
             Module = LazyLoad(lazy(viteModule[URL]))
             const ele = meta?.auth ? <Auth>{Module}</Auth> : Module
             routers[index] = {
@@ -59,7 +60,7 @@ function filterAsyncRouter(routes: RoutersProps[], routers: RoutersProps[]) {
             routers[index].children = filterAsyncRouter(route.children, routers[index].children || [])
         }
     })
-    return routes
+    return routers
 }
 
 const useLazy = (routes: RoutersProps[]) => {
@@ -77,22 +78,3 @@ const Router = () => {
 
 export {Router, useLazy}
 
-
-// import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-// import App from "../App";
-// import Home from "../pages/home";
-// import Login from "../pages/login/login";
-//
-// const baseRouter = () => (
-//     <BrowserRouter>
-//         <Routes>
-//             <Route path="/" element={<App/>}>
-//                 <Route path='/' element={<Navigate to='/home'/>}></Route>
-//                 <Route path='/login' element={<Login/>}></Route>
-//                 <Route path='/home' element={<Home/>}></Route>
-//             </Route>
-//         </Routes>
-//     </BrowserRouter>
-// )
-//
-// export default baseRouter

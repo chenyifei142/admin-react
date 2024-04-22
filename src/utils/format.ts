@@ -16,7 +16,6 @@ export function formatFlatTree(
     parentIds: string[] = [],
     treeData: TreeDataState[] = []
 ): TreeDataState[] {
-    debugger
     // 如果数据为空，直接返回已构建的扁平化结果
     if (!data.length) {
         return treeData
